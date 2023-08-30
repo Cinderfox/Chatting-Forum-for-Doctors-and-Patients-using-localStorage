@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatting Forum</title>
+    <link rel="stylesheet" href="/src/main/resources/com/example/userside/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet"> 
+    <style>
+        [class*="notes-container"]>ul>li {
+            margin-left: auto;
+            margin-right: 80px;
+        }
+        .yui>li:nth-child(2), .yui>li:nth-child(4), .yui>li:nth-child(6){
+            position: relative;
+            margin-right: auto;
+            margin-left: 60px;
+        }
+        [class*="notes-container"]>.yui>li:nth-child(2), [class*="notes-container"]>.yui>li:nth-child(4), [class*="notes-container"]>.yui>li:nth-child(6) {
+            background-color: #fff;
+        }
+        [class*="notes-container"]>.yui>li:nth-child(1), [class*="notes-container"]>.yui>li:nth-child(3), [class*="notes-container"]>.yui>li:nth-child(5) {
+            background-color: #c6fdbd;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="chatting_box">
+        <div id="container_3">
+            <div class="profile"><img src="/src/main/resources/com/example/userside/Person_icon.PNG" onclick="pfp_open()"><span onclick="pfp_open()">Profile</span></div>
+            <div id="pfp" class="profile_closed">
+                <div class="upper_pfp_area"></div>
+                <span  id="arrow_span0" class="arrow_span0" onclick="pfp_open()"><img src="/src/main/resources/com/example/userside/Arrow_icon.png" alt="" id="arrow" class="old_arrow"><p>Back</p></span>
+            
+            </div>
+            <div id="user_select">
+                <div class="ppl" onclick="item_5()"><img src="/src/main/resources/com/example/userside/Doctor_icon.PNG"><span>Doctor</span></div>
+            </div>
+            <input type="radio" name="users" id="item-5" checked />
+            <div class="cards">
+
+                <input type="file" id="upload" hidden/>
+                <label class="upload" for="upload"><img src="/src/main/resources/com/example/userside/Clip_icon.png" alt=""></label>
+                <label class="card_" for="item-5" id="user-5">
+                    <div class="user_card user5">
+                        <div class="notes-container5">
+                            <ul id="ul1"></ul>
+                        </div>
+                    </div>
+                </label>
+                <div style="position: relative">
+                    <div class="form-container5">
+                        <form class="form_5" id="form_5">
+                            <input type="text" id="title5" placeholder="Type a message" />
+                            <input type="text" id="date" />
+                            <button type="submit" id="send5"><img src="/src/main/resources/com/example/userside/Send_icon.png" alt=""></button>
+                        </form>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/src/main/resources/com/example/userside/index.js"></script>
+    <script>
+        window.onload = () => {
+            displayNotes5();
+            setInterval(updateClock, 500);
+        };
+    </script>
+</body>
+
+</html>
